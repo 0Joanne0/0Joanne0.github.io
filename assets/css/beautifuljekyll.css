@@ -410,15 +410,11 @@ img {
 /* --- Footer --- */
 
 footer {
-  padding: 1.875rem 0;
-  border-top: 1px var(--footer-col) solid;
-  margin-top: 3.125rem;
-  font-size: 0.875rem;
   background-color: var(--footer-col);
-  {% if site.footer-img %}
-    background-image: url({{ site.footer-img | relative_url }});
-    background-attachment: fixed;
-  {% endif %}
+  color: var(--footer-text-col);
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
 }
 
 footer p.text-muted {
@@ -427,7 +423,9 @@ footer p.text-muted {
 
 footer a {
   color: var(--footer-link-col);
+  text-decoration: none;
 }
+
 footer .footer-links a {
   color: var(--text-col);
 }
@@ -435,7 +433,10 @@ footer .footer-links .fa-inverse {
   color: var(--page-col);
 }
 
-footer a:hover,
+footer a:hover {
+  color: var(--footer-hover-col);
+},
+
 footer a:focus {
   color: var(--footer-hover-col);
 }
@@ -483,9 +484,12 @@ footer .footer-custom-content {
 }
 
 .post-preview {
-  padding: 1.25rem 0;
-  border-bottom: 1px solid #eee;
-  overflow: hidden;
+  padding: 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  background-color: white;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 768px) {
@@ -849,8 +853,12 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
 /* --- Tables --- */
 
 table {
-  padding: 0;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: white;
 }
+
 table tr {
   border-top: 1px solid #cccccc;
   background-color: var(--page-col);
@@ -860,6 +868,7 @@ table tr {
 table tr:nth-child(2n) {
   background-color: #f8f8f8;
 }
+
 table tr th,
 table tr td {
   border: 1px solid #cccccc;
