@@ -2,9 +2,14 @@
 layout: base
 ---
 
-<div class="intro-header"></div>
+<!-- Banner/Header Section -->
+<div class="intro-header" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/assets/img/banner.jpg') no-repeat center center; background-size: cover; height: 300px; color: white; text-align: center; padding: 50px;">
+  <h1 style="font-size: 2.5em; margin: 0;">Patent-Job Relationship Analysis</h1>
+  <p style="font-size: 1.2em; margin-top: 10px;">Uncovering correlations between patents issued and job openings</p>
+</div>
 
-<main class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
+<!-- Main Content -->
+<main class="{% if page.full-width %} container-fluid {% else %} container-md bg-light shadow rounded py-4 px-5 {% endif %}" style="margin-top: -50px; position: relative;">
   {% if page.before-content %}
     <div class="before-content">
       {% for file in page.before-content %}
@@ -23,3 +28,16 @@ layout: base
     </div>
   {% endif %}
 </main>
+
+<!-- Footer Section -->
+<footer style="background-color: #333; color: #fff; text-align: center; padding: 20px; margin-top: 30px;">
+  <div class="container-md">
+    <p>&copy; 2024 Joanne Atallah | Patent-Job Relationship Analysis</p>
+    <p>
+      <a href="/" style="color: #007BFF;">Home</a> |
+      <a href="/graphs" style="color: #007BFF;">Graphs</a> |
+      <a href="/tables" style="color: #007BFF;">Tables</a> |
+      <a href="/aboutme" style="color: #007BFF;">About</a>
+    </p>
+  </div>
+</footer>
